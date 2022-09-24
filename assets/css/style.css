@@ -1,0 +1,99 @@
+:root {
+    --primary: darkslategrey;
+    --accent:  rgb(204, 7, 204);
+    --text: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header,footer {
+    height: 15vh;
+    background: var(--primary);
+    color: var(--accent);
+    text-align: center;
+}
+
+h1 {
+    color: var(--accent)
+}
+
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section {
+    width: 30%;
+    border: 2px dashed var(--text);
+    height: 20vh;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    
+}
+
+section:hover, section:hover h3 {
+    box-shadow: 0 0 10px rgb(239, 239, 245);
+    transition: all 1s ease;
+}
+
+section > * {
+    width: 90%;
+    margin: 0 auto;
+    color: var(--text);
+
+}
+
+section h3 {
+    border: 2px solid var(--text);
+    position: relative;
+    bottom: 20px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    transition: all 1s ease;  
+    color: var(--accent);  
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.code-block {
+    background-color: linear-gradient(var(--accent)var(--primary));
+    background: var(--accent);
+    flex-grow: 1;
+    bottom: 13px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px;
+    user-select: all;
+}
+
+code::selection {
+    background-color: var(--text);
+    
+}
+
+@media screen and(max-width: 992px) {
+    section {
+        width: 45%;
+        transition: all 1s ease;
+    }
+}
+
+@media screen and(max-width: 768px) {
+    section {
+        width: 90%;
+        transition: all 1s ease;
+    }
+}
